@@ -96,113 +96,92 @@
                     <!-- Glow Efek Latar Belakang -->
                     <div class="absolute -top-10 -right-10 w-72 h-72 bg-blue-400/20 rounded-full blur-2xl pointer-events-none"></div>
                     
-                    <!-- SVG/CSS Mockup Smartphone -->
-                    <div class="relative border-[10px] border-slate-900 rounded-[3rem] h-[500px] w-[250px] bg-[#0a2540] shadow-2xl overflow-hidden flex flex-col justify-between p-4 text-white">
+                    <!-- SVG/CSS Mockup Smartphone (Light Theme, representing the actual website portal) -->
+                    <div class="relative border-[10px] border-slate-900 rounded-[3rem] h-[500px] w-[250px] bg-slate-50 shadow-2xl overflow-hidden flex flex-col justify-between p-3 text-slate-800">
                         <!-- Top Notch Speaker -->
-                        <div class="absolute top-2 left-1/2 -translate-x-1/2 w-28 h-5 bg-slate-900 rounded-full flex items-center justify-center">
+                        <div class="absolute top-2 left-1/2 -translate-x-1/2 w-28 h-5 bg-slate-900 rounded-full flex items-center justify-center z-20">
                             <span class="w-2.5 h-2.5 bg-slate-800 rounded-full"></span>
                         </div>
                         
-                        <!-- Header Internal Aplikasi -->
-                        <div class="pt-6 flex justify-between items-center text-[10px] opacity-80 px-2">
-                            <span>Aplikasi L-Dry</span>
-                            <div class="flex items-center space-x-1">
-                                <span class="w-2 h-2 bg-emerald-500 rounded-full animate-ping"></span>
-                                <span>Lacak Kurir</span>
+                        <!-- Top Bar / App Logo -->
+                        <div class="pt-6 pb-2 border-b border-slate-200/60 bg-white -mx-3 px-4 flex justify-between items-center text-xs">
+                            <span class="font-extrabold text-blue-600 tracking-tight">L-DRY</span>
+                            <div class="flex items-center gap-1">
+                                <span class="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-ping"></span>
+                                <span class="text-[9px] text-slate-400 font-bold uppercase">Portal Web</span>
                             </div>
                         </div>
 
-                        <!-- Status Pesanan Aktif Mockup -->
-                        <div class="my-auto space-y-6 px-1">
-                            <div class="text-center">
-                                <span class="text-[10px] uppercase tracking-widest text-blue-400 font-bold">Pesanan Aktif</span>
-                                <h4 class="text-lg font-black mt-1">Sedang Diantar</h4>
-                                <p class="text-[11px] text-slate-300">Estimasi sampai: 14:45</p>
-                            </div>
-
-                            <!-- Langkah Progress -->
-                            <div class="space-y-4">
-                                <div class="flex items-center space-x-3 text-xs">
-                                    <div class="w-5 h-5 rounded-full bg-blue-500 flex items-center justify-center">
-                                        <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                                        </svg>
-                                    </div>
-                                    <span class="text-slate-300">Sudah Dijemput</span>
-                                </div>
-                                <div class="flex items-center space-x-3 text-xs">
-                                    <div class="w-5 h-5 rounded-full bg-blue-500 flex items-center justify-center">
-                                        <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                                        </svg>
-                                    </div>
-                                    <span class="text-slate-300">Sedang Dicuci</span>
-                                </div>
-                                <div class="flex items-center space-x-3 text-xs font-bold text-white">
-                                    <div class="w-5 h-5 rounded-full bg-blue-400 flex items-center justify-center animate-pulse">
-                                        <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125a1.125 1.125 0 001.125-1.125V9.75M8.25 18.75h6m-6 0V6.75A2.25 2.25 0 0110.5 4.5h3a2.25 2.25 0 012.25 2.25v12m-6 0h6" />
-                                        </svg>
-                                    </div>
-                                    <span>Sedang Diantar</span>
+                        <!-- Main Screen Content -->
+                        <div class="flex-1 my-auto py-3 space-y-3 overflow-hidden">
+                            <!-- Tracking Header Card -->
+                            <div class="bg-white border border-slate-100 rounded-2xl p-3 shadow-sm space-y-1">
+                                <span class="text-[8px] font-bold text-slate-400 uppercase tracking-wider">No. Pesanan</span>
+                                <h4 class="text-xs font-black text-slate-800">ORD-98421</h4>
+                                <div class="flex justify-between items-center pt-1.5">
+                                    <span class="px-2 py-0.5 rounded-full bg-purple-100 text-purple-700 text-[8px] font-bold">
+                                        Sedang Dicuci
+                                    </span>
+                                    <span class="text-[8px] text-slate-400 font-semibold">14 Jul, 19:45</span>
                                 </div>
                             </div>
 
-                            <!-- Informasi Driver/Kurir -->
-                            <div class="bg-white/10 rounded-2xl p-3 flex items-center justify-between border border-white/5">
-                                <div class="flex items-center space-x-2.5">
-                                    <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center font-bold text-xs">KB</div>
-                                    <div>
-                                        <h5 class="text-[11px] font-bold">Kurir Budi</h5>
-                                        <p class="text-[9px] text-slate-300">Armada Premium L-Dry</p>
+                            <!-- Progress & Time Card -->
+                            <div class="bg-white border border-slate-100 rounded-2xl p-3 shadow-sm space-y-2">
+                                <div class="flex items-center gap-1.5 text-blue-600">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    <span class="text-[9px] font-bold">Estimasi Selesai</span>
+                                </div>
+                                <p class="text-sm font-black text-slate-800">Hari ini, 20:30</p>
+                                
+                                <!-- Progress bar -->
+                                <div class="space-y-1">
+                                    <div class="h-1.5 rounded-full bg-slate-100 overflow-hidden">
+                                        <div class="h-full bg-blue-500 rounded-full" style="width: 57%;"></div>
+                                    </div>
+                                    <div class="flex justify-between text-[8px] text-slate-400 font-bold">
+                                        <span>Proses</span>
+                                        <span>57%</span>
                                     </div>
                                 </div>
-                                <span class="text-[10px] bg-blue-500/20 text-blue-300 py-1 px-2.5 rounded-full font-bold">Hubungi</span>
+                            </div>
+
+                            <!-- Simplified Stepper -->
+                            <div class="bg-white border border-slate-100 rounded-2xl p-3 shadow-sm space-y-2.5">
+                                <span class="text-[9px] font-bold text-slate-800 block">Status Terkini</span>
+                                
+                                <div class="space-y-2">
+                                    <div class="flex items-center gap-2 text-[10px]">
+                                        <div class="w-4 h-4 rounded-full bg-blue-500 flex items-center justify-center text-white shrink-0">
+                                            <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                        </div>
+                                        <span class="text-slate-500 font-medium">Diterima</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 text-[10px] font-bold text-slate-800">
+                                        <div class="w-4 h-4 rounded-full bg-blue-100 border border-blue-500 flex items-center justify-center text-blue-600 shrink-0 animate-pulse">
+                                            <span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
+                                        </div>
+                                        <span>Sedang Dicuci</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 text-[10px]">
+                                        <div class="w-4 h-4 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-400 shrink-0">
+                                            <span class="w-1.5 h-1.5 bg-slate-300 rounded-full"></span>
+                                        </div>
+                                        <span class="text-slate-400">Siap Diambil</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
                         <!-- Menu Navigasi Smartphone Mockup -->
-                        <div class="border-t border-white/10 pt-2 flex justify-around text-[10px] opacity-75">
-                            <span class="text-blue-400">Pesan</span>
-                            <span>Lacak</span>
+                        <div class="border-t border-slate-200/60 bg-white -mx-3 p-2 flex justify-around text-[9px] font-bold text-slate-400">
+                            <span class="text-blue-600">Lacak</span>
+                            <span>Riwayat</span>
                             <span>Profil</span>
                         </div>
                     </div>
 
-                    <!-- Kartu Melayang di Sekitar Smartphone -->
-                    <div class="absolute -left-10 bottom-12 bg-white rounded-2xl p-4 shadow-xl border border-slate-100 max-w-[180px] hidden sm:block transform -rotate-3 transition duration-300 hover:rotate-0">
-                        <div class="flex items-center space-x-2">
-                            <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <defs>
-                                    <linearGradient id="sparkleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" stop-color="#f59e0b" />
-                                        <stop offset="100%" stop-color="#ef4444" />
-                                    </linearGradient>
-                                </defs>
-                                <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275Z" fill="url(#sparkleGrad)" stroke="url(#sparkleGrad)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="m5 3 1 2.5L8.5 6 6 7 5 9.5 4 7 1.5 6 4 5.5Z" fill="url(#sparkleGrad)" />
-                                <path d="m19 17 1 2.5 2.5.5-2.5 1-1 2.5-1-2.5-2.5-1 2.5-1Z" fill="url(#sparkleGrad)" />
-                            </svg>
-                            <span class="text-xs font-black text-[#0a2540]">Layanan Rapi & Wangi</span>
-                        </div>
-                        <p class="text-[10px] text-slate-500 mt-1">Pakaian Anda diperiksa dengan teliti sebelum dikemas.</p>
-                    </div>
 
-                    <div class="absolute -right-8 top-16 bg-white rounded-2xl p-4 shadow-xl border border-slate-100 max-w-[160px] hidden sm:block transform rotate-6 transition duration-300 hover:rotate-0">
-                        <div class="flex items-center space-x-2">
-                            <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <defs>
-                                    <linearGradient id="zapGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" stop-color="#3b82f6" />
-                                        <stop offset="100%" stop-color="#1d4ed8" />
-                                    </linearGradient>
-                                </defs>
-                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" fill="url(#zapGrad)" stroke="url(#zapGrad)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <span class="text-xs font-black text-[#0a2540]">Selesai Tepat Waktu</span>
-                        </div>
-                        <p class="text-[10px] text-slate-500 mt-1">Pakaian bersih siap diantar kembali dalam 24 jam.</p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -839,11 +818,11 @@
 
             <!-- Layout Testimoni Utama -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-                <!-- Testimoni Utama (Elena Rossi) -->
+                <!-- Testimoni Utama (Wahyu Taruna) -->
                 <div class="lg:col-span-8 bg-slate-50 border border-slate-100 rounded-3xl overflow-hidden flex flex-col md:flex-row hover:shadow-lg transition duration-300">
                     <div class="md:w-2/5 min-h-[300px] relative">
-                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=500&q=80" 
-                             class="w-full h-full object-cover" alt="Elena Rossi Creative Director">
+                        <img src="/testimoni-taruna.jpg" 
+                             class="w-full h-full object-cover object-top" alt="Wahyu Taruna">
                     </div>
                     <div class="md:w-3/5 p-8 md:p-12 flex flex-col justify-between space-y-6">
                         <div class="space-y-4">
@@ -856,12 +835,12 @@
                                 <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
                             </div>
                             <blockquote class="text-[#0a2540] text-lg font-medium leading-relaxed italic">
-                                "L-Dry adalah satu-satunya jasa laundry yang saya percayai untuk merawat pakaian-pakaian mahal saya. Teknik pencucian mereka sangat aman untuk berbagai jenis bahan sensitif."
+                                "Seragam dinas dan pakaian harian saya selalu bersih, rapi, dan wangi tepat waktu. L-Dry benar-benar bisa diandalkan untuk merawat pakaian yang butuh penanganan khusus!"
                             </blockquote>
                         </div>
                         <div>
-                            <h4 class="font-extrabold text-[#0a2540] text-sm">Elena Rossi</h4>
-                            <p class="text-xs text-slate-400 font-medium">Creative Director, Atelier Rossi</p>
+                            <h4 class="font-extrabold text-[#0a2540] text-sm">Wahyu</h4>
+                            <p class="text-xs text-slate-400 font-medium">Taruna Akademi, Pelanggan L-Dry</p>
                         </div>
                     </div>
                 </div>
@@ -1060,42 +1039,19 @@
                 </div>
             </div>
 
-            <!-- Blok CTA Download Aplikasi & WhatsApp Concierge -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-                <!-- Kartu Aplikasi -->
-                <div class="bg-white border border-slate-100 rounded-3xl p-8 md:p-10 flex flex-col justify-between hover:shadow-md transition duration-300">
-                    <div class="space-y-4">
-                        <span class="text-[10px] font-bold text-blue-600 uppercase tracking-widest">PESAN MUDAH</span>
-                        <h3 class="text-2xl font-black text-[#0a2540]">Aplikasi L-Dry (Web & Android)</h3>
-                        <ul class="space-y-2 text-xs text-slate-500">
-                            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-blue-500 mr-2"></span> Lacak lokasi kurir secara real-time</li>
-                            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-blue-500 mr-2"></span> Atur jadwal penjemputan laundry dengan mudah</li>
-                            <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-blue-500 mr-2"></span> Pantau status cucian Anda kapan saja</li>
-                        </ul>
-                    </div>
-                    <div class="mt-8 flex flex-col sm:flex-row gap-3">
-                        <a href="{{ auth()->check() ? (auth()->user()->role === 'customer' ? route('customer.orders.create') : route('dashboard')) : route('register') }}" 
-                           class="flex-1 px-4 py-3.5 bg-[#0a2540] hover:bg-slate-900 text-white font-bold rounded-xl text-[11px] uppercase tracking-wider text-center transition shadow-sm">
-                            Pesan Sekarang
-                        </a>
-                        <a href="{{ asset('downloads/l-dry.apk') }}" download
-                           class="flex-1 px-4 py-3.5 bg-blue-50 hover:bg-blue-100 text-blue-700 font-bold rounded-xl text-[11px] uppercase tracking-wider text-center transition border border-blue-100/50">
-                            Download App (APK)
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Kartu WhatsApp -->
-                <div class="bg-white border border-slate-100 rounded-3xl p-8 md:p-10 flex flex-col justify-between hover:shadow-md transition duration-300">
-                    <div class="space-y-4">
-                        <span class="text-[10px] font-bold text-emerald-600 uppercase tracking-widest">LAYANAN CEPAT</span>
-                        <h3 class="text-2xl font-black text-[#0a2540]">Layanan Chat WhatsApp</h3>
-                        <p class="text-slate-500 text-xs leading-relaxed">
-                            Punya pertanyaan cepat atau ingin pesan laundry lebih mudah? Silakan hubungi admin kami via WhatsApp.
+            <!-- Blok CTA WhatsApp Concierge -->
+            <div class="mt-12">
+                <!-- Kartu WhatsApp (Full Width) -->
+                <div class="bg-white border border-slate-100 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 hover:shadow-lg transition duration-300">
+                    <div class="space-y-4 max-w-2xl text-center md:text-left">
+                        <span class="inline-flex px-3.5 py-1.5 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold uppercase tracking-wider">LAYANAN CEPAT</span>
+                        <h3 class="text-3xl font-black text-[#0a2540] tracking-tight">Layanan Chat WhatsApp</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed">
+                            Punya pertanyaan cepat atau ingin pesan laundry lebih mudah? Tim admin kami siap melayani pesanan laundry antar-jemput dan menjawab keluhan Anda secara cepat melalui WhatsApp.
                         </p>
                     </div>
                     <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', $settings['whatsapp']) }}?text={{ urlencode('Halo L-Dry, saya ingin memesan layanan laundry antar-jemput.') }}" target="_blank"
-                       class="mt-8 px-6 py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl text-xs uppercase tracking-widest text-center transition shadow-sm">
+                       class="px-8 py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-2xl shadow-md transition duration-200 text-sm text-center w-full md:w-auto whitespace-nowrap">
                         Chat WhatsApp Sekarang
                     </a>
                 </div>

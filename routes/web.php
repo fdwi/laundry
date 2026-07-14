@@ -162,3 +162,33 @@ Route::get('/clear-laundrai-cache', function (\Illuminate\Http\Request $request)
     }
 });
 
+// Route untuk mengetes WhatsApp secara langsung
+Route::get('/test-wa-laundrai', function (\Illuminate\Http\Request $request) {
+    $phone = $request->query('phone');
+    if (!$phone) {
+        return 'Masukkan nomor HP di URL. Contoh: /test-wa-laundrai?phone=08123456789';
+    }
+    
+    $token = env('FONNTE_TOKEN');
+    if (empty($token)) {
+        return 'Gagal: FONNTE_TOKEN kosong di .env cPanel Anda! Pastikan sudah diisi dan disave.';
+    }
+    
+    try {
+        $response = \Illuminate\Support\Facades\Http::withHeaders([
+            'Authorization' => $token,
+        ])->withoutVerifying()->post('https://api.fonnte.com/send', [
+            'target' => $phone,
+            'message' => 'Tes koneksi Fonnte API dari website Laundry L-Dry!',
+            'countryCode' => '62',
+        ]);
+        
+        return response()->json([
+            'http_status' => $response->status(),
+            'fonnte_response' => $response->json() ?? $response->body()
+        ]);
+    } catch (\Exception $e) {
+        return 'Error Koneksi: ' . $e->getMessage();
+    }
+});
+

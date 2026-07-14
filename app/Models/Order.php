@@ -26,6 +26,12 @@ class Order extends Model
                 }
             }
         });
+
+        static::updated(function (Order $order) {
+            if ($order->wasChanged('status')) {
+                \App\Services\NotificationService::sendOrderStatusNotification($order);
+            }
+        });
     }
 
     public function awardLateDeliveryPoints()
