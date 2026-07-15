@@ -12,6 +12,11 @@ class LandingController extends Controller
     {
         $services = Service::where('is_active', true)->get();
         
+        $regulerService = $services->where('slug', 'laundry-reguler')->first();
+        $expressService = $services->where('slug', 'express-service')->first();
+        $dryService = $services->where('slug', 'dry-cleaning')->first();
+        $sepatuService = $services->where('slug', 'sepatu-tas')->first();
+        
         // Fetch settings for footer / contact info
         $settings = [
             'business_name' => Setting::getValue('business_name', 'L-DRY'),
@@ -20,6 +25,6 @@ class LandingController extends Controller
             'operating_hours' => Setting::getValue('operating_hours', '08:00 - 20:00'),
         ];
         
-        return view('welcome', compact('services', 'settings'));
+        return view('welcome', compact('services', 'settings', 'regulerService', 'expressService', 'dryService', 'sepatuService'));
     }
 }

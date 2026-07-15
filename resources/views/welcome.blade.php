@@ -696,11 +696,11 @@
                      class="rounded-3xl p-8 flex flex-col justify-between relative transform transition-all duration-300 cursor-pointer">
                     <div class="space-y-6">
                         <div>
-                            <h3 :class="hoverCard === 1 ? 'text-white' : 'text-slate-800'" class="text-lg font-bold">Paket Kiloan</h3>
-                            <p :class="hoverCard === 1 ? 'text-blue-100' : 'text-slate-400'" class="text-xs">Sangat pas untuk pakaian santai sehari-hari</p>
+                            <h3 :class="hoverCard === 1 ? 'text-white' : 'text-slate-800'" class="text-lg font-bold">{{ $regulerService?->name ?? 'Paket Kiloan' }}</h3>
+                            <p :class="hoverCard === 1 ? 'text-blue-100' : 'text-slate-400'" class="text-xs">{{ $regulerService?->description ?? 'Sangat pas untuk pakaian santai sehari-hari' }}</p>
                         </div>
                         <div :class="hoverCard === 1 ? 'text-white' : 'text-slate-900'" class="text-3xl font-black">
-                            Rp 7.000 <span :class="hoverCard === 1 ? 'text-blue-200' : 'text-slate-400'" class="text-sm font-medium">/ kg</span>
+                            Rp {{ number_format($regulerService?->price_per_kg ?? 7000, 0, ',', '.') }} <span :class="hoverCard === 1 ? 'text-blue-200' : 'text-slate-400'" class="text-sm font-medium">/ kg</span>
                         </div>
                         <ul class="space-y-3.5 text-sm">
                             <li class="flex items-center space-x-2">
@@ -729,11 +729,11 @@
                     <span class="absolute top-0 right-1/2 transform translate-x-1/2 -translate-y-1/2 bg-blue-500 text-white font-extrabold text-[10px] uppercase tracking-widest px-4 py-1.5 rounded-full shadow-md">Terpopuler</span>
                     <div class="space-y-6">
                         <div>
-                            <h3 :class="hoverCard === 2 ? 'text-white' : 'text-slate-800'" class="text-lg font-bold">Paket Ekspres</h3>
-                            <p :class="hoverCard === 2 ? 'text-blue-100' : 'text-slate-400'" class="text-xs">Untuk kebutuhan mendesak, selesai lebih cepat</p>
+                            <h3 :class="hoverCard === 2 ? 'text-white' : 'text-slate-800'" class="text-lg font-bold">{{ $expressService?->name ?? 'Paket Ekspres' }}</h3>
+                            <p :class="hoverCard === 2 ? 'text-blue-100' : 'text-slate-400'" class="text-xs">{{ $expressService?->description ?? 'Untuk kebutuhan mendesak, selesai lebih cepat' }}</p>
                         </div>
                         <div :class="hoverCard === 2 ? 'text-white' : 'text-slate-900'" class="text-3xl font-black">
-                            Rp 12.000 <span :class="hoverCard === 2 ? 'text-blue-200' : 'text-slate-400'" class="text-sm font-medium">/ kg</span>
+                            Rp {{ number_format($expressService?->price_per_kg ?? 12000, 0, ',', '.') }} <span :class="hoverCard === 2 ? 'text-blue-200' : 'text-slate-400'" class="text-sm font-medium">/ kg</span>
                         </div>
                         <ul class="space-y-3.5 text-sm">
                             <li class="flex items-center space-x-2">
@@ -761,11 +761,11 @@
                      class="rounded-3xl p-8 flex flex-col justify-between relative transform transition-all duration-300 cursor-pointer">
                     <div class="space-y-6">
                         <div>
-                            <h3 :class="hoverCard === 3 ? 'text-white' : 'text-slate-800'" class="text-lg font-bold">Paket Cuci Satuan</h3>
-                            <p :class="hoverCard === 3 ? 'text-blue-100' : 'text-slate-400'" class="text-xs">Untuk jas, kebaya, gaun, dan pakaian berbahan sensitif</p>
+                            <h3 :class="hoverCard === 3 ? 'text-white' : 'text-slate-800'" class="text-lg font-bold">{{ $dryService?->name ?? 'Paket Cuci Satuan' }}</h3>
+                            <p :class="hoverCard === 3 ? 'text-blue-100' : 'text-slate-400'" class="text-xs">{{ $dryService?->description ?? 'Untuk jas, kebaya, gaun, dan pakaian berbahan sensitif' }}</p>
                         </div>
                         <div :class="hoverCard === 3 ? 'text-white' : 'text-slate-900'" class="text-3xl font-black">
-                            Rp 25.000 <span :class="hoverCard === 3 ? 'text-blue-200' : 'text-slate-400'" class="text-sm font-medium">/ pcs</span>
+                            Rp {{ number_format($dryService?->price_per_pcs ?? 25000, 0, ',', '.') }} <span :class="hoverCard === 3 ? 'text-blue-200' : 'text-slate-400'" class="text-sm font-medium">/ pcs</span>
                         </div>
                         <ul class="space-y-3.5 text-sm">
                             <li class="flex items-center space-x-2">
